@@ -13,5 +13,5 @@ This script uses the [vosk-cli](https://github.com/elan-ev/vosk-cli), which is a
 videos_directory = "C:\Users\MyWindowsAcccountName\Videos"
 vosk_model_path = "C:\Users\MyWindowsAcccountName\.cache\vosk\vosk-model-en-us-0.22"
 ```
-3. The **vosk_model_path** is the path to the folder where you unzipped your chosen [Vosk Model](https://alphacephei.com/vosk/models).
-4. Run the script with your favourite Python IDE/environment.
+3. The *vosk_model_path* is the path to the folder where you unzipped your chosen [Vosk Model](https://alphacephei.com/vosk/models).
+4. Run the script with your favourite Python IDE/command line environment. Make sure that both *ffmpeg* and *vosk-cli* are in your PATH, i.e., if you can successfully run them from the command line.
