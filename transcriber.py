@@ -9,15 +9,15 @@ config = configparser.ConfigParser()
 config.read('transcriber.ini')
 
 # Retrieve 'vosk_model_path' and 'root_directory' from the 'Settings' section of the .ini file
-vosk_model_path = config.get('Settings', 'vosk_model_path')
-root_directory = config.get('Settings', 'root_directory')
+vosk_model_path = os.path.normpath(config.get('Settings', 'vosk_model_path'))
+videos_directory = os.path.normpath(config.get('Settings', 'videos_directory'))
 
 # Recursively search through the directory structure
-for foldername, subfolders, filenames in os.walk(root_directory):
+for folder_name, subfolders, filenames in os.walk(videos_directory):
     for filename in filenames:
         # Check if the file is an .mp4 file
         if filename.endswith('.mp4'):
-            mp4_path = os.path.join(foldername, filename)
+            mp4_path = os.path.join(folder_name, filename)
 
             # Construct the .vtt file path
             vtt_path = os.path.splitext(mp4_path)[0] + '.vtt'
