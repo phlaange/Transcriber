@@ -1,5 +1,5 @@
 # Transcriber
-Transcriber is a Python scribes that transcribes the speech from videos, in a folder hierarchy, into subtitle files for those videos.
+Transcriber is a Python script that transcribes the speech from videos, in a folder hierarchy, into subtitle files for those videos.
 
 This script uses the [vosk-cli](https://github.com/elan-ev/vosk-cli), which is an interface for the [Vosk](https://alphacephei.com/vosk/) speech recognition toolkit. 
 
