@@ -2,6 +2,7 @@ import os
 import subprocess
 import configparser
 
+
 # Initialize the config parser
 config = configparser.ConfigParser()
 
@@ -38,3 +39,5 @@ for folder_name, subfolders, filenames in os.walk(videos_directory):
                     )
                 except subprocess.CalledProcessError as e:
                     print(f"Error processing {mp4_path}: {e}")
+            else:
+                print(f"Already processed: {mp4_path}")
